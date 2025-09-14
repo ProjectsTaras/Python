@@ -15,3 +15,5 @@ if warunekA == 0 and warunekB == 0:
     print("Odcinek |AB| leży na prostej.")
 else:
     print("Odcinek |AB| NIE leży na prostej.")
+
+#okokok
