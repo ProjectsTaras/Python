@@ -28,10 +28,10 @@ def punkt_w_wielokacie(x, y, polygon):
     for i in range(n):
         x0, y0 = polygon[i]
         x1, y1 = polygon[(i + 1) % n]  # ostatni łączy się z pierwszym
-        # jeśli punkt leży dokładnie na krawędzi – zwracamy "na brzegu"
+        # jeśli punkt leży dokładnie na krawędzi – zwracamy "na krawędzi"
         if min(x0, x1) <= x <= max(x0, x1) and min(y0, y1) <= y <= max(y0, y1):
             if (x1 - x0) * (y - y0) == (y1 - y0) * (x - x0):
-                return "Punkt leży na brzegu"
+                return "Punkt leży na krawędzi"
         przeciecia += krawedz_przecina_pollinie(x, y, x0, y0, x1, y1)
 
     return "Punkt wewnątrz" if przeciecia % 2 == 1 else "Punkt na zewnątrz"
