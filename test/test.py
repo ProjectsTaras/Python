@@ -12,3 +12,9 @@ print("3 5".split()[0])
 print("3 5".split()[1])
 
 # print(map(float, ["3", "5"])) → [3.0, 5.0]
+p = [(10,20),(30,40),(50,60),(70,80)]
+x, y = p[0] #rozpakowanie krotki
+print(x,y)
+print(type(x))
+print(type(y))
+print(0>-3)

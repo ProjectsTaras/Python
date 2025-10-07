@@ -1,4 +1,4 @@
-def krawedz_przecina_pollinie(x, y, x0, y0, x1, y1):
+def krawedz_przecina_lamana(x, y, x0, y0, x1, y1):
     if y0 > y1:
         x0, y0, x1, y1 = x1, y1, x0, y0
 
@@ -32,7 +32,7 @@ def punkt_w_wielokacie(x, y, polygon):
         if min(x0, x1) <= x <= max(x0, x1) and min(y0, y1) <= y <= max(y0, y1):
             if (x1 - x0) * (y - y0) == (y1 - y0) * (x - x0):
                 return "Punkt leży na krawędzi"
-        przeciecia += krawedz_przecina_pollinie(x, y, x0, y0, x1, y1)
+        przeciecia += krawedz_przecina_lamana(x, y, x0, y0, x1, y1)
 
     return "Punkt wewnątrz" if przeciecia % 2 == 1 else "Punkt na zewnątrz"
 
