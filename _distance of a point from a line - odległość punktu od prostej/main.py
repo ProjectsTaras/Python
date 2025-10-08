@@ -1,3 +1,4 @@
+#from math import *
 import math
 
 A = float(input("Podaj A: "))
