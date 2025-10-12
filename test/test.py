@@ -18,3 +18,13 @@ print(x,y)
 print(type(x))
 print(type(y))
 print(0>-3)
+
+f = filter(lambda x: x % 2 == 0, range(10))
+print(list(f))
+
+def kwadraty(n):
+    for i in range(n):
+        yield i * i
+
+for j in kwadraty(5):
+    print(j)
