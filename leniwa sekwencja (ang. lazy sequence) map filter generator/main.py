@@ -20,7 +20,8 @@ print(next(f))
 print(next(f))
 print(next(f))
 
-f = filter(lambda x: x**3, range(5))  # ❌ to nie podnosi do sześcianu!
+f = filter(lambda x: x**3, range(5))  # !! to nie podnosi do sześcianu! x**3 nie będzie użyta do filtrowania, bo Python traktuje tylko wynik jako warunek (True/False)
+#Python traktuje 0 jako False, a resztę jako True
 print(list(f))
 
 
