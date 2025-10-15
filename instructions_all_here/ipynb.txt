@@ -1,0 +1,37 @@
+💻 Jak uruchomić plik .ipynb w Visual Studio Code lub Google Colab
+
+Ten krótki przewodnik pokazuje, jak otworzyć i uruchomić interaktywny plik Jupyter Notebook (.ipynb) w dwóch najpopularniejszych środowiskach: Visual Studio Code i Google Colab.
+
+🔹 Uruchamianie w Visual Studio Code
+
+1 Otwórz Visual Studio Code.
+
+2 Zainstaluj dwa rozszerzenia: Python oraz Jupyter (oba od Microsoft).
+Zrobisz to w zakładce Extensions (skrót: Ctrl + Shift + X).
+
+3 Otwórz plik .ipynb — notebook otworzy się w formacie z komórkami tekstowymi i kodowymi.
+
+4 Kliknij u góry przycisk Select Kernel i wybierz opcję Python Environments...
+
+5 Z listy wybierz swoje środowisko Python, np. Python 3.10 lub venv.
+
+6 Jeśli pojawi się komunikat o instalacji pakietu ipykernel – kliknij Install.
+
+7 Teraz możesz uruchamiać komórki kodu klikając ▶️ lub używając skrótu Shift + Enter.
+
+🔹 Uruchamianie w Google Colab
+
+1 Wejdź na stronę https://colab.research.google.com.
+
+2 Zaloguj się na swoje konto Google.
+
+3 Kliknij Plik → Otwórz notatnik → Prześlij, a następnie wybierz plik .ipynb z komputera.
+
+4 Plik otworzy się w przeglądarce. Klikaj przyciski ▶️ obok komórek kodu, aby je uruchamiać.
+
+💡 Wskazówki
+
+Jeśli kod się nie uruchamia w VS Code, upewnij się, że masz zainstalowany Python
+(można to sprawdzić w terminalu poleceniem python --version).
+
+Google Colab nie wymaga instalowania niczego – działa całkowicie w przeglądarce.
