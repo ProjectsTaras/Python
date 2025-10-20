@@ -1,4 +1,4 @@
-def krawedz_przecina_pollinie(x, y, x0, y0, x1, y1):
+def krawedz_przecina_lamana(x, y, x0, y0, x1, y1):
     # Uporządkuj wierzchołki tak, by y0 <= y1 (łatwiej sprawdzać)
     if y0 > y1:
         x0, y0, x1, y1 = x1, y1, x0, y0
@@ -30,4 +30,4 @@ def krawedz_przecina_pollinie(x, y, x0, y0, x1, y1):
     # 4. Sprawdzamy, czy przecięcie jest po prawej stronie
     return 1 if xp >= x else 0
 
-print(krawedz_przecina_pollinie(1, 1, 0, 0, 2, 2))
+print(krawedz_przecina_lamana(1, 1, 0, 0, 2, 2))
