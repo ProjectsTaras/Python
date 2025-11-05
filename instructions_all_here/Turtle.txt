@@ -1,0 +1,20 @@
+Biblioteka turtle pozwala tworzyć grafiki w prosty sposób. Żółw („turtle”) porusza się po ekranie i zostawia ślad – jak długopis na kartce.
+Podstawowe komendy
+import turtle
+t = turtle.Turtle()               # tworzymy żółwia
+lub
+import turtle as Zolw
+zolw = Zolw.Turtle()
+
+t.forward(100)                    # ruch do przodu o 100 pikseli
+t.backward(50) zolw.back(50)      # ruch do tyłu o 50 pikseli
+t.left(90)  zolw.lt(kąt)          # obrót w lewo o 90°
+t.right(45) zolw.rt(kąt)          # obrót w prawo o 45°
+t.penup() lub zolw.pu()           # podnieś pióro (nie rysuje)
+t.pendown() lub zolw.pd()         # opuść pióro (rysuje)
+zolw.goto(x, y)                   #przejście do punktu o współrzędnych (x, y)
+zolw.home()                       #powrót do punktu (0,0)
+zolw.hideturtle()                 #ukrywa żółwia
+t.color("blue")       # ustaw kolor
+t.speed(0)            # ustawia prędkość rysowania (0–10), 0 – natychmiast, 10 – bardzo szybko, 1 – wolno.
+turtle.done()         # zatrzymuje okno po zakończeniu
