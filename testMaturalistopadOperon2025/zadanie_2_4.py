@@ -8,12 +8,12 @@ wielomiany = []
 
 for line in lines:
     numbers = list(map(int, line.strip().split()))
-    n = numbers[0]
+    
     wielomiany.append(numbers)
 
 # 2. Obliczanie różnicy liczby mnożeń
 def roznica_mnozen(n):
-    return n * (n - 1) // 2
+    return n * (n - 1) // 2 - n
 
 max_roznica = -1
 wynikowe_wielomiany = []
