@@ -7,8 +7,7 @@ with open("testMaturalistopadoperon2025\przyklad_wielomiany.txt", "r") as f:
 wielomiany = []
 
 for line in lines:
-    numbers = list(map(int, line.strip().split()))
-    
+    numbers = list(map(int, line.strip().split()))    
     wielomiany.append(numbers)
 
 # 2. Obliczanie różnicy liczby mnożeń
