@@ -12,7 +12,7 @@ for line in lines:
 
 # 2. Obliczanie różnicy liczby mnożeń
 def roznica_mnozen(n):
-    return n * (n - 1) // 2 - n
+    return n * (n - 1) // 2   # n * (n + 1) // 2 - n
 
 max_roznica = -1
 wynikowe_wielomiany = []
