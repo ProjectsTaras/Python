@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Створи свій рецепт</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Створи свій рецепт для приготування страви</h1>
+    <button id="openFormBtn" class="primary-btn">Додати рецепт</button>
+    <section id="recipes" class="recipes"></section>
+  </main>
+
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeFormBtn" class="close-btn" aria-label="Закрити">x</button>
+      <h2>Новий рецепт</h2>
+
+      <form id="recipeForm" enctype="multipart/form-data">
+        <label for="dish_type">Що будете готувати?</label>
+        <select id="dish_type" name="dish_type" required>
+          <option value="">Оберіть страву</option>
+          <option>Хліб</option>
+          <option>Піцца</option>
+          <option>Салат</option>
+          <option>Вареники</option>
+          <option>Пельмені</option>
+          <option>Борщ</option>
+        </select>
+
+        <label for="title">Назва рецепта</label>
+        <input id="title" name="title" type="text" placeholder="Наприклад: Домашня піцца" required>
+
+        <label for="description">Опис</label>
+        <textarea id="description" name="description" rows="4" placeholder="Кроки приготування" required></textarea>
+
+        <label for="image">Завантажити зображення (необов'язково)</label>
+        <input id="image" name="image" type="file" accept="image/*">
+
+        <button class="primary-btn" type="submit">Зберегти рецепт</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
