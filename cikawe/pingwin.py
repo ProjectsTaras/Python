@@ -1,0 +1,12 @@
+"""children = int(input())
+apple = int(input())
+print(apple//children)
+children = int(input())
+apple = int(input())
+print(apple%children)"""
+penguin = int(input())
+print('   _~_    ' * penguin)
+print('  (o o)   ' * penguin)
+print('  / V \\   ' * penguin)
+print(' /( _ )\\  ' * penguin)
+print('  ^^ ^^   ' * penguin)

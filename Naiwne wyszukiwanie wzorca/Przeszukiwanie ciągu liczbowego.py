@@ -116,7 +116,6 @@ print("Binarne:", time.time() - start)
 Dlaczego taka różnica?
 Liniowe sprawdza maksymalnie 1 000 000 elementów
 Binarne potrzebuje około:
-log2(1 000 000)≈20log2
-(1000000)≈20
+log2(1 000 000)≈20
 Czyli tylko około 20 porównań zamiast miliona!
 """
