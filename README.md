@@ -72,3 +72,8 @@ git push -u origin main --force
 ⚠️ Це перезапише віддалену гілку main вашими локальними змінами. Якщо на GitHub є важливі коміти, їх буде втрачено.
 
 pip install matplotlib
+
+INFO
+git status
+git remote show origin
+git remote -v

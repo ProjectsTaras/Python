@@ -1,0 +1,11 @@
+Moje imię: Franciszek
+Liczba wystąpień: 7
+Imię sąsiada powtórzone:
+Hubert
+Hubert
+Hubert
+Hubert
+Hubert
+Hubert
+Hubert
+Hubert

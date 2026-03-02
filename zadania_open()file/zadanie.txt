@@ -1,0 +1,18 @@
+﻿Zadanie: Imiona w pliku
+
+W pliku names.txt zapisano 1000 imion (po jednym imieniu w każdym wierszu).
+
+Napisz program w języku Python albo C++, który:
+1. Wczyta dane z pliku names.txt.
+2. Sprawdzi, ile razy występuje Twoje imię.
+3. Sprawdzi imię Twojego sąsiada i wypisze to imię tyle razy, ile razy występuje ono w pliku (nie liczbę, tylko powtórzone imię w kolejnych wierszach).
+4. Zapisze wynik do pliku wynik.txt.
+
+Wymagania do pliku wynik.txt:
+- W pierwszym wierszu zapisz: "Moje imię: <imię>".
+- W drugim wierszu zapisz: "Liczba wystąpień: <liczba>".
+- W trzecim wierszu zapisz: "Imię sąsiada powtórzone:".
+- Od czwartego wiersza wpisuj imię sąsiada tyle razy, ile występuje w pliku names.txt.
+
+Uwaga:
+W zbiorze są między innymi imiona uczniów: Franciszek, Hubert, Oleksii.
