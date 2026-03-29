@@ -6,7 +6,7 @@ def czy_pierwsza(n):
             return False
     return True
 
-with open("hasla.txt", "r", encoding="utf-8") as plik:
+with open("testMaturalistopadOperon2025/hasla.txt", "r", encoding="utf-8") as plik:
     for linia in plik:
         haslo = linia.strip()
         if all(czy_pierwsza(ord(znak)) for znak in haslo):

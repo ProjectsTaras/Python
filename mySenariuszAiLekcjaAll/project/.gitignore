@@ -1,0 +1,8 @@
+.claude
+.venv
+cuda
+__pycache__
+archive/birds_train_small
+archive/birds_train_small
+checkpoints
+birds.mp4

@@ -1,0 +1,62 @@
+Algorytm
+Naiwne wyszukiwanie wzorca jest najprostszą metodą sprawdzania czy w przeszukiwanym tekście można znaleźć określone wyrażenie. Jego prosta idea jest wystarczająca, aby wykonać zadanie, ale w przypadku większych danych algorytm ten może okazać się mało efektywny.
+
+Zasada działania
+Załóżmy, że:
+tekst ma długość n
+wzorzec ma długość m
+Algorytm sprawdza każdy możliwy fragment tekstu o długości m i porównuje go ze wzorcem.
+Dla każdej pozycji i od 0 do n - m:
+porównujemy kolejne znaki tekstu z odpowiadającymi znakami wzorca,
+jeśli wszystkie znaki są zgodne — znaleziono wystąpienie,
+jeśli którykolwiek znak się nie zgadza — przechodzimy do następnej pozycji.
+
+
+Złożoność obliczeniowa
+Najgorszy przypadek:
+ Θ(n · m)
+ (gdy prawie wszystkie znaki się zgadzają i różni się dopiero ostatni)
+Typowy przypadek:
+ bliski Θ(n), ponieważ często niezgodność występuje już na pierwszym znaku.
+Kroki algorytmu
+Wczytaj tekst oraz wzorzec.
+Oblicz:
+n – długość tekstu,
+m – długość wzorca.
+Ustaw licznik wystąpień na 0.
+Dla każdej pozycji i od 0 do n - m:
+Porównaj tekst[i + j] z wzorzec[j] dla j od 0 do m - 1.
+Jeśli wszystkie znaki są zgodne, zwiększ licznik.
+Zwróć licznik wystąpień.
+
+
+Przykład działania
+Weźmy tekst "INFORMACJA" i wyszukajmy tekst "MA" kolejno należy porównywać następujące fragmenty:
+Fragment
+Szukany fragment
+IN
+Nie
+NF
+Nie
+FO
+Nie
+OR
+Nie
+RM
+Nie
+MA
+Tak
+AC
+Nie
+CJ
+Nie
+JA
+Nie
+
+Wzorzec występuje 1 raz.
+
+Rozszerzenia zadania:
+wyszukiwanie bez rozróżniania wielkości liter,
+zliczanie nakładających się wystąpień,
+zmierzenie czasu działania dla dużych danych.
+

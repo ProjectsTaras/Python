@@ -1,0 +1,85 @@
+﻿Scenariusz zajęć: AI rozpoznaje gatunki ptaków na zdjęciach
+
+Etap edukacyjny i typ szkoły: liceum
+Przedmiot: Informatyka
+Czas trwania: 45 minut (1 lekcja)
+Temat zajęć: Jak działa model AI do klasyfikacji obrazów? Analiza projektu rozpoznawania gatunków ptaków (zdjęcie + perspektywa RTSP).
+
+Szczegóły scenariusza
+Zajęcia pokazują uczniom praktyczne zastosowanie sztucznej inteligencji w realnym problemie: rozpoznawaniu gatunków ptaków na podstawie zdjęcia. Uczniowie pracują na istniejącym projekcie programistycznym, w którym wykorzystano TensorFlow i transfer learning (EfficientNetB0). Dzięki temu widzą pełny cykl pracy: od danych, przez trenowanie i walidację, po predykcję. Projekt jest częściowo ukończony, co dodatkowo rozwija myślenie inżynierskie: uczniowie analizują, co działa, a co wymaga dopracowania (np. moduł RTSP przy karmniku jako kolejny etap).
+Warto zrealizować te zajęcia, ponieważ łączą podstawę programową informatyki (analiza danych, algorytmy, modelowanie, krytyczne myślenie o technologii) z kompetencjami przyszłości: rozumienie ograniczeń AI, jakości danych i odpowiedzialnego wdrażania narzędzi cyfrowych.
+
+Cel/cele zajęć
+Wiedza:
+Uczeń wyjaśnia, czym jest model AI do klasyfikacji obrazów oraz czym różni się trenowanie od testowania/inferencji.
+Uczeń opisuje rolę zbioru danych (w projekcie: 1486 klas gatunków ptaków) i znaczenie podziału na dane treningowe i walidacyjne.
+Uczeń rozpoznaje pojęcia: transfer learning, epoka, funkcja straty, accuracy, overfitting.
+
+Umiejętności:
+Uczeń analizuje strukturę kodu projektu i wskazuje etapy pipeline’u ML: wczytanie danych, augmentacja, budowa modelu, trening, predykcja.
+Uczeń interpretuje wyniki predykcji (top-k, prawdopodobieństwo) i potrafi krytycznie ocenić wiarygodność wyniku.
+Uczeń proponuje rozszerzenie projektu o wejście z kamery RTSP i wskazuje wymagania techniczne.
+
+Postawy:
+Uczeń rozwija odpowiedzialność cyfrową: rozumie, że model AI może się mylić, a jakość danych wpływa na wynik.
+Uczeń współpracuje w parach/grupie, argumentuje decyzje i formułuje wnioski.
+
+Metody i formy pracy
+Metody: pokaz z objaśnieniem, klasyczna metoda problemowa, burza mózgów, mini-projekt analityczny (analiza istniejącego kodu).
+Formy pracy: praca w parach, praca w małych grupach (3–4 osoby), krótka praca indywidualna (exit ticket).
+
+Wymagania w zakresie technologii
+Sala komputerowa z rzutnikiem lub monitorem interaktywnym.
+Komputer nauczyciela + komputery uczniów (minimum 1 stanowisko na 2 osoby).
+Środowisko Python 3.x, biblioteki: TensorFlow, NumPy, Matplotlib (opcjonalnie OpenCV dla etapu RTSP).
+Dostęp do projektu: folder z plikami m.in. bird_classifier.py, bird_model.keras, class_names.json.
+Dla etapu RTSP: stabilna sieć lokalna, adres strumienia RTSP, podstawowa konfiguracja kamery przy karmniku.
+
+Przebieg zajęć (45 minut)
+1. Wprowadzenie (0–5 min)
+Nauczyciel przedstawia cel lekcji: „Jak komputer uczy się rozpoznawać gatunki ptaków?” oraz pokazuje przykład zdjęcia i wynik klasyfikacji.
+
+2. Co jest w projekcie? (5–12 min)
+Uczniowie w parach przeglądają strukturę projektu.
+Nauczyciel omawia najważniejsze elementy: model EfficientNetB0, plik z nazwami klas, gotowy model, skrypt predykcji i test GPU.
+
+3. Jak działa uczenie modelu? (12–22 min)
+Nauczyciel wyjaśnia na uproszczonym schemacie: dane wejściowe -> cechy -> warstwa klasyfikująca -> strata -> aktualizacja wag (gradient).
+Podkreślenie matematyki: wektory i macierze, prawdopodobieństwo (softmax), minimalizacja błędu, metryka accuracy.
+Uczniowie odpowiadają: „Dlaczego dane treningowe muszą być dobrej jakości i zrównoważone?”
+
+4. Trenowanie vs testowanie (22–30 min)
+Dyskusja kierowana: czym różni się faza trenowania od predykcji na nowym zdjęciu.
+Uczniowie analizują, po co są augmentacje (np. obrót, jasność) i jak pomagają modelowi lepiej generalizować.
+
+5. Moduł RTSP jako niedokończona część projektu (30–40 min)
+Nauczyciel pokazuje koncepcję: kamera przy karmniku -> klatki obrazu -> model AI -> etykieta gatunku + pewność.
+Grupy przygotowują mini-plan wdrożenia:
+- jak pobierać klatki (OpenCV/RTSP),
+- jak często wykonywać predykcję,
+- jak filtrować błędne wyniki (np. próg confidence),
+- jak zapisywać obserwacje do pliku/raportu.
+
+6. Podsumowanie i refleksja (40–45 min)
+Uczniowie kończą zdanie: „Dziś zrozumiałem/-am, że model AI...”
+Nauczyciel zbiera 2–3 wnioski klasowe i porządkuje pojęcia kluczowe.
+
+Ewaluacja i dodatkowe informacje
+Sposób ewaluacji zajęć:
+Exit ticket (krótka kartka/ankieta online, 3 pytania):
+1) Wyjaśnij różnicę między trenowaniem a testowaniem modelu.
+2) Podaj jeden czynnik wpływający na jakość klasyfikacji.
+3) Zaproponuj jedną poprawkę projektu dla etapu RTSP.
+
+Wskazówki dla innych nauczycieli korzystających z tego scenariusza (opcjonalne):
+Jeśli klasa ma mniejsze doświadczenie programistyczne, skup się bardziej na analizie procesu i wyników niż na szczegółach implementacji kodu.
+Jeśli czas pozwoli, zaplanuj 2. lekcję: implementacja prototypu RTSP i test na krótkim materiale wideo.
+
+Materiały pomocnicze (opcjonalne):
+Pliki projektu (lokalnie): bird_classifier.py, class_names.json, bird_model.keras.
+Uproszczony schemat pipeline’u ML przygotowany przez nauczyciela (slajd/tablica).
+Krótki quiz podsumowujący (np. Forms/Kahoot).
+
+Forma prowadzenia zajęć: stacjonarna (możliwa adaptacja do trybu hybrydowego).
+Licencja: CC BY-NC-SA 4.0 (Uznanie autorstwa – Użycie niekomercyjne – Na tych samych warunkach 4.0 Międzynarodowe).
+Alternatywnie: CC0 1.0 Universal (Przekazanie do Domeny Publicznej).
