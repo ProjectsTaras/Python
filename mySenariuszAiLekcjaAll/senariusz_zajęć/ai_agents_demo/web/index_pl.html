@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo AI Agents</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">AI lesson demo</p>
+        <h1>Wizualna demonstracja wspolpracy AI-agentow</h1>
+        <p class="lede">
+          Tutaj widac nie tylko jedna odpowiedz, ale caly proces: kto otrzymal zadanie,
+          kto co analizuje i jak powstaje wynik koncowy.
+        </p>
+        <div class="controls">
+          <button id="runButton" class="primary">Uruchom demonstracje</button>
+          <button id="nextButton" class="secondary" disabled>Nastepny krok</button>
+          <button id="resetButton" class="secondary" disabled>Reset</button>
+        </div>
+      </section>
+
+      <section class="scenario card">
+        <h2>Zadanie od uzytkownika</h2>
+        <p id="scenarioTitle" class="scenario-title"></p>
+        <p><strong>Cel:</strong> <span id="scenarioGoal"></span></p>
+        <p><strong>Kontekst:</strong> <span id="scenarioContext"></span></p>
+      </section>
+
+      <section class="grid">
+        <div class="agents card">
+          <div class="section-head">
+            <h2>Agenci</h2>
+            <span id="agentStatus" class="pill">Oczekiwanie</span>
+          </div>
+          <div id="agentsGrid" class="agents-grid"></div>
+        </div>
+
+        <div class="timeline card">
+          <div class="section-head">
+            <h2>Przeplyw pracy</h2>
+            <span id="stepCounter" class="pill">0 / 0</span>
+          </div>
+          <div id="timeline" class="timeline-list"></div>
+        </div>
+      </section>
+
+      <section class="output card">
+        <div class="section-head">
+          <h2>Szczegoly aktywnego kroku</h2>
+          <span id="activeAgent" class="pill muted">Jeszcze nie uruchomiono</span>
+        </div>
+        <h3 id="detailTitle">Kliknij "Uruchom demonstracje"</h3>
+        <pre id="detailContent" class="detail-content">Po starcie tutaj zobaczysz wynik pracy kazdego agenta.</pre>
+      </section>
+    </main>
+
+    <script src="/static/app_pl.js"></script>
+  </body>
+</html>
